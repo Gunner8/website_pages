@@ -24,9 +24,17 @@
     <button class="button" onclick="colorChange()" id="colorChange">Click Me!!</button>
     
     <script>
+        let hasToggled = false;
         function colorChange()
         {
-            document.getElementById("colorChange").style.background = "gray";
+            if (hasToggled) {
+                document.getElementById("colorChange").style.backgroundColor = "black";
+                hasToggled = false;
+            }
+            else {
+                document.getElementById("colorChange").style.background = "gray";
+                hasToggled = true;
+            }
         }
     </script>
 </body>
