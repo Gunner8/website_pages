@@ -25,6 +25,7 @@
     
     <script>
         let hasToggled = false;
+        let counter = 0;
         function colorChange()
         {
             if (hasToggled) {
@@ -34,6 +35,12 @@
             else {
                 document.getElementById("colorChange").style.background = "gray";
                 hasToggled = true;
+            }
+        }
+        function increment()
+        {
+            if(hasToggled) {
+                counter += 1;
             }
         }
     </script>
