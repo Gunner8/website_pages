@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Changing Button!</title>
+  <style>
+    body {
+      background-image: url("shrek.png");
+      background-repeat: no-repeat;
+      background-size: 10px 10px;
+      background-color: rgb(3, 11, 0);
+      transition-duration: 500ms;
+    }
+    .screen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(+150%);
+    }
+    .button{
+      justify-self: center;
+
+      width: 150px;
+      height: 150px;
+
+      text-align: center;
+      font-size: 40px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+      border: 2px solid rgb(33, 174, 35);
+      border-radius: 20px;
+
+      background-color: black;
+      color: rgb(33, 174, 35);
+
+      transition-duration: 450ms;
+    }
+    .button:hover {
+      width: 160px;
+      height: 160px;
+
+      font-size: 43px;
+
+      background-color: rgb(33, 174, 35);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var hasChanged = 0;
+    function colorChange()
+    {
+      if (hasChanged == 1)
+      {
+        document.body.style.background = "rgb(3, 11, 0)"; 
+        hasChanged = 0;
+      }
+      else if(hasChanged == 0)
+      {
+        document.body.style.background = "rgb(72, 212, 75)";
+        hasChanged = 1;
+      }
+    }
+  </script>
+  <div class="screen">
+    <button class="button" onclick="colorChange()" id="color_change">Press me!</button>
+  </div>
+</body>
+</html>
